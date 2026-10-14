@@ -1,3 +1,10 @@
+
+# AI assistance disclosure:
+# I used ChatGPT (OpenAI) as a learning and debugging aid during development.
+# I discussed Flask routes, SQLite queries, authentication, error diagnosis,
+# and interface improvements. I reviewed, adapted, and tested the resulting
+# implementation and am responsible for the final project.
+
 from flask import Flask, render_template, request, redirect, session
 import os
 import sqlite3
