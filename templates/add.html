@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Novo lançamento - Financeira</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Financeira</h1>
+        <span>Novo lançamento</span>
+    </header>
+
+    <main>
+
+        <h2>Novo lançamento</h2>
+
+        <form action="/add" method="post">
+
+            <label for="type">Tipo</label>
+
+            <select name="type" id="type">
+                <option value="receita">Receita</option>
+                <option value="despesa">Despesa</option>
+            </select>
+
+            <label for="amount">Valor</label>
+
+            <input type="number" name="amount" id="amount" step="0.01" min="0.01" required>
+
+            <label for="category">Categoria</label>
+            
+            <select name="category" id="category" required>
+                
+                <option value="">Selecione uma categoria</option>
+
+                <option value="Alimentação">Alimentação</option>
+                <option value="Moradia">Moradia</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Educação">Educação</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Salário">Salário</option>
+                <option value="Investimentos">Investimentos</option>
+                <option value="Outros">Outros</option>
+
+            </select>
+
+            <label for="description">Descrição</label>
+
+            <input type="text" name="description" id="description">
+
+            <label for="date">Data</label>
+
+            <input type="date" name="date" id="date" required>
+
+            <button type="submit">Adicionar</button>
+
+        </form>
+
+        <a href="/" class="button secondary">
+    Voltar ao dashboard
+</a>
+
+    </main>
+
+</body>
+
+</html>

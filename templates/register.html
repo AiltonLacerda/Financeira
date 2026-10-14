@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar conta - Financeira</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="auth-page">
+
+    <header class="auth-header">
+        <h1>Financeira</h1>
+        <a href="/login" class="header-button">Entrar</a>
+    </header>
+
+    <main class="auth-main">
+
+        <section class="auth-card">
+
+            <div class="auth-intro">
+                <h2>Crie sua conta</h2>
+                <p>
+                    Comece a organizar suas finanças e acompanhe
+                    suas receitas e despesas em um só lugar.
+                </p>
+            </div>
+
+            <form action="/register" method="post" class="auth-form">
+
+                <div class="auth-field">
+                    <label for="username">Nome de usuário</label>
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Escolha um nome de usuário"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="auth-field">
+                    <label for="password">Senha</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Crie uma senha"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="auth-submit">
+                    Criar minha conta
+                </button>
+
+            </form>
+
+            <div class="auth-footer">
+                <p>
+                    Já possui uma conta?
+                    <a href="/login">Entre aqui</a>
+                </p>
+            </div>
+
+        </section>
+
+        <p class="auth-caption">
+            Sua organização financeira começa aqui.
+        </p>
+
+    </main>
+
+</body>
+
+</html>

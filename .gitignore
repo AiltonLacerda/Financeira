@@ -1,0 +1,28 @@
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Ambiente virtual
+.venv/
+venv/
+env/
+
+# Banco de dados local
+financeira.db
+financeira.db-journal
+financeira.db-wal
+financeira.db-shm
+
+# Segredos e variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Editores
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

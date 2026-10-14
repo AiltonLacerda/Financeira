@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editar lançamento - Financeira</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Financeira</h1>
+        <span>Editar lançamento</span>
+    </header>
+
+    <main>
+
+        <h2>Editar lançamento</h2>
+
+        <form action="/edit/{{ transaction['id'] }}" method="post">
+
+            <label for="type">Tipo</label>
+
+            <select name="type" id="type" required>
+
+                <option value="receita"
+                    {% if transaction["type"] == "receita" %}selected{% endif %}>
+                    Receita
+                </option>
+
+                <option value="despesa"
+                    {% if transaction["type"] == "despesa" %}selected{% endif %}>
+                    Despesa
+                </option>
+
+            </select>
+
+
+            <label for="amount">Valor</label>
+
+            <input
+                type="number"
+                name="amount"
+                id="amount"
+                step="0.01"
+                value="{{ transaction['amount'] }}"
+                required
+            >
+
+
+            <label for="category">Categoria</label>
+
+            <select name="category" id="category" required>
+
+                <option value="">Selecione uma categoria</option>
+
+                <option value="Alimentação"
+                    {% if transaction["category"] == "Alimentação" %}selected{% endif %}>
+                    Alimentação
+                </option>
+
+                <option value="Moradia"
+                    {% if transaction["category"] == "Moradia" %}selected{% endif %}>
+                    Moradia
+                </option>
+
+                <option value="Transporte"
+                    {% if transaction["category"] == "Transporte" %}selected{% endif %}>
+                    Transporte
+                </option>
+
+                <option value="Saúde"
+                    {% if transaction["category"] == "Saúde" %}selected{% endif %}>
+                    Saúde
+                </option>
+
+                <option value="Educação"
+                    {% if transaction["category"] == "Educação" %}selected{% endif %}>
+                    Educação
+                </option>
+
+                <option value="Lazer"
+                    {% if transaction["category"] == "Lazer" %}selected{% endif %}>
+                    Lazer
+                </option>
+
+                <option value="Salário"
+                    {% if transaction["category"] == "Salário" %}selected{% endif %}>
+                    Salário
+                </option>
+
+                <option value="Investimentos"
+                    {% if transaction["category"] == "Investimentos" %}selected{% endif %}>
+                    Investimentos
+                </option>
+
+                <option value="Outros"
+                    {% if transaction["category"] == "Outros" %}selected{% endif %}>
+                    Outros
+                </option>
+
+            </select>
+
+
+            <label for="description">Descrição</label>
+
+            <input
+                type="text"
+                name="description"
+                id="description"
+                value="{{ transaction['description'] or '' }}"
+            >
+
+
+            <label for="date">Data</label>
+
+            <input
+                type="date"
+                name="date"
+                id="date"
+                value="{{ transaction['date'] }}"
+                required
+            >
+
+
+            <button type="submit">Salvar alterações</button>
+
+        </form>
+
+        <a href="/" class="button secondary">
+            Voltar ao dashboard
+        </a>
+
+    </main>
+
+</body>
+
+</html>

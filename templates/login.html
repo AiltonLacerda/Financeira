@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar - Financeira</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="auth-page">
+
+    <header class="auth-header">
+        <h1>Financeira</h1>
+        <a href="/register" class="header-button">Criar conta</a>
+    </header>
+
+    <main class="auth-main">
+
+        <section class="auth-card">
+
+            <div class="auth-intro">
+                <h2>Bem-vindo de volta!</h2>
+                <p>Entre na sua conta e acompanhe suas finanças.</p>
+            </div>
+
+            <form action="/login" method="post" class="auth-form">
+
+                <div class="auth-field">
+                    <label for="username">Usuário</label>
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Digite seu usuário"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="auth-field">
+                    <label for="password">Senha</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="auth-submit">
+                    Entrar na minha conta
+                </button>
+
+            </form>
+
+            <div class="auth-footer">
+                <p>
+                    Ainda não possui uma conta?
+                    <a href="/register">Cadastre-se</a>
+                </p>
+            </div>
+
+        </section>
+
+        <p class="auth-caption">
+            Organize suas finanças. Acompanhe sua evolução.
+        </p>
+
+    </main>
+
+</body>
+
+</html>
